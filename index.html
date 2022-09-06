@@ -12,40 +12,53 @@
 
 <body>
     <div class="container">
-        <h1>Border-Radius Generator Tool</h1>
-        <div class="wrapper">
-            <div class="slider-container top-left">
-                <label for="topLeftSlider">Top Left: </label><input value="0" class="slider" type="range" name=""
-                    min="0" max="100" id="topLeftSlider">
-            </div>
-            <div class="slider-container top-right">
-                <label for="topRightSlider">Top Right: </label><input value="0" class="slider" type="range" name=""
-                    min="0" max="100" id="topRightSlider">
-            </div>
-        </div>
+        <header>
+            <h1>Border-Radius Generator Tool</h1>
+        </header>
+        <main>
+            <section>
+                <article class="slider-container all-sides">
+                    <label for="allSideSlider">All: </label><input value="0" class="slider" type="range" name="" min="0"
+                        max="100" id="allSideSlider">
+                </article>
+                <article class="wrapper">
+                    <div class="slider-container top-left">
+                        <label for="topLeftSlider">Top Left: </label><input value="0" class="slider" type="range"
+                            name="" min="0" max="100" id="topLeftSlider">
+                    </div>
+                    <div class="slider-container top-right">
+                        <label for="topRightSlider">Top Right: </label><input value="0" class="slider" type="range"
+                            name="" min="0" max="100" id="topRightSlider">
+                    </div>
+                </article>
 
-        <!-- Radius Preview -->
-        <div class="box" id="box">Box Preview</div>
+                <!-- Radius Preview -->
+                <article class="box" id="box">Box Preview</article>
 
-        <div class="wrapper">
-            <div class="slider-container bottom-left">
-                <label for="bottomLeftSlider"> Bottom Left: </label><input value="0" class="slider" type="range" name=""
-                    min="0" max="100" id="bottomLeftSlider">
-            </div>
-            <div class="slider-container bottom-right">
-                <label for="bottomRightSlider">Bottom Right: </label><input value="0" class="slider" type="range"
-                    name="" min="0" max="100" id="bottomRightSlider">
-            </div>
-        </div>
-        <div class="controls">
-            <textarea name="css-code" class="code-prev" id="css-code"
-                disabled>border-radius: 0% 0% 0% 0%</textarea>
-            <div class="controler">
-                <button id="copy-style">Copy CSS</button>
-                <button id="reset">Reset</button>
-                <button id="random-radius" >Random</button>
-            </div>
-        </div>
+                <article class="wrapper">
+                    <div class="slider-container bottom-left">
+                        <label for="bottomLeftSlider"> Bottom Left: </label><input value="0" class="slider" type="range"
+                            name="" min="0" max="100" id="bottomLeftSlider">
+                    </div>
+                    <div class="slider-container bottom-right">
+                        <label for="bottomRightSlider">Bottom Right: </label><input value="0" class="slider"
+                            type="range" name="" min="0" max="100" id="bottomRightSlider">
+                    </div>
+                </article>
+                <article class="controls">
+                    <textarea name="css-code" class="code-prev" id="css-code"
+                        disabled>border-radius: 0% 0% 0% 0%</textarea>
+                    <div class="controler">
+                        <button id="copy-style">Copy CSS</button>
+                        <button id="reset">Reset</button>
+                        <button id="random-radius">Random</button>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p>My Git</p>
+        </footer>
     </div>
 
     <script src="./assets/js/script.js"></script>
