@@ -1,4 +1,6 @@
 const elements = {
+    // Global side
+    allSideSlider: document.querySelector('#allSideSlider'),
     // Input Rangers
     topLeft: document.querySelector('#topLeftSlider'),
     topRight: document.querySelector('#topRightSlider'),
@@ -17,12 +19,22 @@ const elements = {
 
 // Set Border-Radius
 elements.sliders.forEach(slider => {
+
+    if (slider.id == 'allSideSlider') {
+        slider.addEventListener('input', () => {
+            elements.topLeft.value = allSideSlider.value
+            elements.topRight.value = allSideSlider.value
+            elements.bottomLeft.value = allSideSlider.value
+            elements.bottomRight.value = allSideSlider.value
+        })
+    }
+
     slider.addEventListener('input', () => {
-        elements.previewBox.style.borderTopLeftRadius = elements.topLeft.value +'%'
-        elements.previewBox.style.borderTopRightRadius = elements.topRight.value +'%'
-        elements.previewBox.style.borderBottomLeftRadius = elements.bottomLeft.value +'%'
-        elements.previewBox.style.borderBottomRightRadius = elements.bottomRight.value +'%'
-    
+        elements.previewBox.style.borderTopLeftRadius = elements.topLeft.value + '%'
+        elements.previewBox.style.borderTopRightRadius = elements.topRight.value + '%'
+        elements.previewBox.style.borderBottomLeftRadius = elements.bottomLeft.value + '%'
+        elements.previewBox.style.borderBottomRightRadius = elements.bottomRight.value + '%'
+
         elements.cssCode.textContent = `border-radius: ${elements.topLeft.value}% ${elements.topRight.value}% ${elements.bottomLeft.value}% ${elements.bottomRight.value}%`
     })
 })
@@ -30,7 +42,7 @@ elements.sliders.forEach(slider => {
 // Copy
 elements.copyCode.addEventListener('click', () => {
     let copy_code = elements.cssCode
-    
+
     copy_code.select()
     copy_code.setSelectionRange(0, 10000)
 
@@ -55,11 +67,11 @@ elements.randomRadius.addEventListener('click', () => {
     elements.topRight.value = Math.floor(Math.random() * 101)
     elements.bottomLeft.value = Math.floor(Math.random() * 101)
     elements.bottomRight.value = Math.floor(Math.random() * 101)
-    
-    elements.previewBox.style.borderTopLeftRadius = elements.topLeft.value +'%'
-    elements.previewBox.style.borderTopRightRadius = elements.topRight.value +'%'
-    elements.previewBox.style.borderBottomLeftRadius = elements.bottomLeft.value +'%'
-    elements.previewBox.style.borderBottomRightRadius = elements.bottomRight.value +'%'
-    
+
+    elements.previewBox.style.borderTopLeftRadius = elements.topLeft.value + '%'
+    elements.previewBox.style.borderTopRightRadius = elements.topRight.value + '%'
+    elements.previewBox.style.borderBottomLeftRadius = elements.bottomLeft.value + '%'
+    elements.previewBox.style.borderBottomRightRadius = elements.bottomRight.value + '%'
+
     elements.cssCode.textContent = `border-radius: ${elements.topLeft.value}% ${elements.topRight.value}% ${elements.bottomLeft.value}% ${elements.bottomRight.value}%`
 })

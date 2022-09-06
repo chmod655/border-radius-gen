@@ -19,7 +19,6 @@ body {
 h1 {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
 
 .container {
@@ -38,13 +37,18 @@ h1 {
     line-height: 19;
     transition: .3s ease-out;
 }
-
 .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 10px 0;
     margin: 10px;
+}
+
+
+.all-sides {
+    text-align: center;
+    padding: 10px;
 }
 
 .controls {
@@ -64,6 +68,7 @@ h1 {
     padding: 4px;
     width: 50%;
     height: 80px;
+    border: 1px solid black;
 }
 
 .controler {
@@ -80,5 +85,10 @@ h1 {
     border-radius: 8px;
     border: none;
     
+    transition: .3s;
     color: white;
+}
+
+.controler button:hover {
+    background-color: rgb(255, 143, 123);
 }
