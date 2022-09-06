@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-Radius Generator Tool</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Border-Radius Generator Tool</h1>
+        <div class="wrapper">
+            <div class="slider-container top-left">
+                <label for="topLeftSlider">Top Left: </label><input value="0" class="slider" type="range" name=""
+                    min="0" max="100" id="topLeftSlider">
+            </div>
+            <div class="slider-container top-right">
+                <label for="topRightSlider">Top Right: </label><input value="0" class="slider" type="range" name=""
+                    min="0" max="100" id="topRightSlider">
+            </div>
+        </div>
+
+        <!-- Radius Preview -->
+        <div class="box" id="box">Box Preview</div>
+
+        <div class="wrapper">
+            <div class="slider-container bottom-left">
+                <label for="bottomLeftSlider"> Bottom Left: </label><input value="0" class="slider" type="range" name=""
+                    min="0" max="100" id="bottomLeftSlider">
+            </div>
+            <div class="slider-container bottom-right">
+                <label for="bottomRightSlider">Bottom Right: </label><input value="0" class="slider" type="range"
+                    name="" min="0" max="100" id="bottomRightSlider">
+            </div>
+        </div>
+        <div class="controls">
+            <textarea name="css-code" class="code-prev" id="css-code"
+                disabled>border-radius: 0% 0% 0% 0%</textarea>
+            <div class="controler">
+                <button id="copy-style">Copy CSS</button>
+                <button id="reset">Reset</button>
+                <button id="random-radius" >Random</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
